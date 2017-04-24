@@ -226,7 +226,7 @@ class SgxBoundsPass {
 		// . objSize >= objOffset  (unsigned)
 		// . objSize - objOffset >= size  (unsigned)
 		return objOffset >= 0 && objSize >= uint64_t(objOffset) &&
-			objSize - uint64_t(objOffset) >= size / 8;
+			objSize - uint64_t(objOffset) >= size;
 	}
 
 	int getMemPointerOperandIdx(Instruction* I) {
